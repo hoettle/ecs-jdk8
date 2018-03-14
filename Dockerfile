@@ -17,5 +17,3 @@ RUN apk add --no-cache bash curl tini py-pip python \
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
 CMD ["start"]
 EXPOSE 8080
-
-COPY ["build/libs/app.jar", "docker/*", "/"]

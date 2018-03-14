@@ -1,6 +1,6 @@
 # ecs-jdk8
 
-This repository builds a Docker image for applications using JDK8 on ECS. The
+This repository builds a template Docker image for applications using JDK8 on ECS. The
 image is based on Alpine Linux but includes some extra libraries in order to
 run the KPL and other things that require glibc.
 
@@ -12,3 +12,6 @@ In order, it:
 
 Of note, it also bakes in the NewRelic agent and (TEMPLATED!!!) configuration
 file.
+
+Note that it does *NOT* copy the artifacts (build/libs/app.jar, "docker/*") as
+they don't exist.
