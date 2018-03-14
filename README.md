@@ -5,7 +5,7 @@ image is based on Alpine Linux but includes some extra libraries in order to
 run the KPL and other things that require glibc.
 
 In order, it:
-* installs libraries
+* installs libraries (specifically libuuid for the KPL)
 * installs tini
 * exposes port 8080
 * sets the entrypoint to '/sbin/tini -- /docker-entrypoint.sh'
