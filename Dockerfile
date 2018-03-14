@@ -10,7 +10,7 @@ FROM frolvlad/alpine-oraclejdk8:full
 # https://github.com/awslabs/amazon-kinesis-producer/issues/158
 RUN apk add --no-cache bash curl tini py-pip python \
         libuuid && \
-    pip install --upgrade pip awscli && \
+    pip install --no-cache-dir --upgrade pip awscli && \
     curl -sLo /newrelic.jar https://s3.amazonaws.com/unlockd-releases/newrelic-agent/3.47.0/newrelic.jar && \
     curl -sLo /newrelic.yml https://s3.amazonaws.com/unlockd-releases/newrelic-agent/3.47.0/newrelic.yml
 
